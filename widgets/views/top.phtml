@@ -1,0 +1,50 @@
+<div class="navbar navbar-inverse navbar-fixed-top <?= isset($inverse) ? 'navbar-inverse' : ''?>" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="<?=BASE_URL?>"><?=APP_NAME?></a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+
+
+        <?php if(isset($menu) && sizeof($menu) > 0): ?>
+             <?php foreach($menu as $item): ?>
+                <?php
+                    //$_item_style = '';
+
+                    //if(View::getViewId() && $item['id'] == View::getViewId())
+                    //{
+                      //  $_item_style = 'active';
+                    //}
+                ?>
+                <?php if(isset($item['divider']) && $item['divider']): ?>
+                <li class="divider"></li>
+                <?php endif; ?>
+                <li>
+                    <a href="<?=$item['enlace']?>" class="dropdown-toggle glyphicon <?=$item['imagen']?>" data-toggle="dropdown"></a>
+
+                       <?php foreach($item as $subitem): ?>
+                            <?php if(isset($subitem['enlace']) && sizeof($subitem['enlace'] > 0)): ?>
+                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                    <li>
+                      <a href="<?=$subitem['enlace'];?>"><?=$subitem['titulo'];?> <span class="glyphicon <?=$subitem['imagen']?> pull-right"></span></a>
+                    </li>
+                </ul>
+                            <?php endif; ?>
+                       <?php endforeach; ?>
+                </li>
+            <?php endforeach; ?>
+        <?php endif; ?>
+      </ul>
+      <form class="navbar-form navbar-right">
+        <input type="text" class="form-control" placeholder="Buscar...">
+      </form>
+    </div>
+  </div>
+</div>

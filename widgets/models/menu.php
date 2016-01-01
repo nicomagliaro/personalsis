@@ -1,0 +1,152 @@
+<?php
+
+class menuModelWidget extends Model
+{
+    public function __construct(){
+        parent::__construct();
+    }
+
+    public function getMenu($menu)
+    {
+        $menus['sidebar'] = array(
+            array(
+                'id' => 'seguridad',
+                'titulo' => 'Seguridad',
+                'enlace' => '#',
+                'divider' => false,
+                'imagen' => 'glyphicon-chevron-left',
+                'submenu' =>
+
+                        array(
+                            'id' => 'usuarios',
+                            'titulo' => 'Usuarios',
+                            'enlace' => BASE_URL . 'usuarios',
+                            'divider' => false,
+                            'imagen' => 'glyphicon-expand'
+                        ),
+
+                        array(
+                            'id' => 'permisos',
+                            'titulo' => 'Permisos',
+                            'enlace' =>  BASE_URL . 'acl',
+                            'divider' => false,
+                            'imagen' => 'glyphicon-expand'
+                        )
+
+            ),
+
+            array(
+                'id' => 'administracion',
+                'titulo' => 'Administracion',
+                'enlace' => '#',
+                'divider' => false,
+                'imagen' => 'glyphicon-chevron-left',
+                'submenu' =>
+
+                        array(
+                            'id' => 'productos',
+                            'titulo' => 'Productos',
+                            'enlace' => BASE_URL . 'lotes/producto',
+                            'divider' => false,
+                            'imagen' => 'glyphicon-expand'
+                        ),
+
+                        array(
+                            'id' => 'catalogos',
+                            'titulo' => 'Catalogos',
+                            'enlace' => BASE_URL . 'lotes/catalogo',
+                            'divider' => false,
+                            'imagen' => 'glyphicon-expand'
+                        ),
+
+                        array(
+                            'id' => 'centros',
+                            'titulo' => 'Centros',
+                            'enlace' => BASE_URL . 'lotes/sede',
+                            'divider' => true,
+                            'imagen' => 'glyphicon-expand'
+                        )
+
+            )
+
+        );
+
+
+        $menus['top'] = array(
+            array(
+                'id' => 'sesion',
+                'titulo' => 'Sesion',
+                'enlace' => '#',
+                'divider' => false,
+                'imagen' => 'glyphicon-user',
+                'submenu' =>
+                    array(
+                    )
+
+            ),
+            array(
+                'id' => 'settings',
+                'titulo' => 'Settings',
+                'enlace' => '#',
+                'imagen' => 'glyphicon-cog',
+                'submenu' =>
+                    array(
+                         )
+
+                )
+            
+
+            /*array(
+                'id' => 'notificaciones',
+                'titulo' => 'Notificaciones',
+                'enlace' => '#',
+                'imagen' => 'glyphicon-cog',
+                'submenu' =>
+                    array(
+
+                )
+            ),
+
+            array(
+                'id' => 'ayuda',
+                'titulo' => 'Ayuda',
+                'enlace' => '#',
+                'imagen' => 'glyphicon-cog',
+                'submenu' =>
+                    array(
+
+                    )
+            )*/
+        
+        );
+
+        if(Session::get('autenticado')){
+            $menus['top'][0]['submenu'] = array(
+                'id' => 'cerrar',
+                'titulo' => 'Cerrar',
+                'enlace' => BASE_URL . 'usuarios/login/cerrar',
+                'divider' => false,
+                'imagen' => 'glyphicon-expand'
+            );
+            $menus['top'][1]['submenu'] = array(
+                'id' => 'menus',
+                'titulo' => 'Menus',
+                'enlace' => BASE_URL . 'settings/menu',
+                'divider' => false,
+                'imagen' => 'glyphicon-expand'
+            );
+        }else{
+            $menus['top'][0]['submenu'] = array(
+                'id' => 'entrar',
+                'titulo' => 'Entrar',
+                'enlace' => BASE_URL . 'usuarios/login',
+                'divider' => false,
+                'imagen' => 'glyphicon-expand'
+            );
+        }
+
+        return $menus[$menu];
+    }
+}
+
+?>

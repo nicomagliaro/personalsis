@@ -1,0 +1,34 @@
+<div class="col-sm-3 col-md-2 sidebar" id="prueba">
+    <ul class="nav nav-pills nav-stacked">
+    <li class="active"><a href="<?=BASE_URL?>">Inicio<span class="glyphicon glyphicon-home pull-right"></span></a></li>
+   
+    <?php foreach($menu as $m): ?>
+
+        <?php if(isset($id)): ?>
+            <?php $_style = 'active'; ?>
+        <?php else: ?>
+            <?php $_style = ''; ?>
+        <?php endif; ?>
+
+        <?php if(isset($m['divider']) && $m['divider']): ?>
+            <li class="divider"></li>
+        <?php endif; ?>
+        <li class="menu-item dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="<?=$m['enlace']?>"><?=$m['titulo']?> <span class="glyphicon <?=$m['imagen']?> pull-right"></span></a>
+        <?php for($i=1;$i<sizeof($m);$i++): ?>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                <li>
+            <?php if(isset($m[$i]['submenu'])):?>
+                    <a href="<?=$s['enlace']?>"usuarios"><?=$s['titulo']?><span class="glyphicon <?=$s['imagen']?> pull-right"></span></a>
+                </li>
+                <?php if(isset($s['divider']) && $s['divider']): ?>
+                    <li class="divider"></li>
+                <?php endif; ?>
+            </ul>
+            <?php endif;?>
+
+        <?php endfor; ?>
+        </li>
+    <?php endforeach; ?>
+  </ul>
+</div>
