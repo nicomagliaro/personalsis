@@ -17,13 +17,18 @@ class menuWidget extends Widget
 
     public function getConfig($menu)
     {
-        $menus['sidebar'] = array(
-            'position' => 'sidebar',
-            'show' => 'all',
+        $menus['nav'] = array(
+            'position' => 'nav',
+            'show' => 'all'
         );
 
         $menus['top'] = array(
             'position' => 'top',
+            'show' => 'all'
+        );
+
+        $menus['sidebar'] = array(
+            'position' => 'sidebar',
             'show' => 'all'
         );
 

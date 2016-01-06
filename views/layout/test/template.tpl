@@ -13,11 +13,11 @@
     </head>
     
     <body>
-      {if isset($widgets.top)}
-                    {foreach from=$widgets.top item=tp}
-                        {$tp}
-                    {/foreach}
-                {/if}
+    {if isset($widgets.top)}
+        {foreach from=$widgets.top item=tp}
+            {$tp}
+        {/foreach}
+    {/if}
                 
         <div style="background: #B40404; height: 110px; margin-bottom: 20px; width: 100%;">
             <div class="container">
@@ -46,11 +46,13 @@
 
                 {include file=$_contenido}
             </div>
+
+
             
             <div class="span3">
-                {if isset($widgets.sidebar)}
-                    {foreach from=$widgets.sidebar item=wd}
-                        {$wd}
+                {if isset($widgets.nav)}
+                    {foreach from=$widgets.nav item=nav}
+                        {$nav}
                     {/foreach}
                 {/if}
             </div>
@@ -60,7 +62,7 @@
         <div class="navbar navbar-fixed-bottom">
             <div class="navbar-inner">
                 <div class="container">
-                    <div style="margin-top: 10px; text-align: center;">Copyright&copy; 2012 <a href="http://www.dlancedu.com" target="_blank">www.dlancedu.com</a></div>
+                    <div style="margin-top: 10px; text-align: center;">Copyright&copy; {{echo date('Y')}} <a href="http://www.dlancedu.com" target="_blank">www.dlancedu.com</a></div>
                 </div>
             </div>
         </div>

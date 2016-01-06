@@ -67,7 +67,7 @@
                                 </div>
 
             <div id="footer">
-                Copyright &copy; 2012 <a href="http://www.dlancedu.com" target="_blank">{$_layoutParams.configs.app_company}</a>
+                Copyright &copy; {{echo date('Y')}} <a href="http://www.dlancedu.com" target="_blank">{$_layoutParams.configs.app_company}</a>
             </div>
         </div>
     </body>

@@ -23,13 +23,15 @@ class Request
             $url = filter_input(INPUT_GET, 'url', FILTER_SANITIZE_URL);
             $url = explode('/', $url);
             $url = array_filter($url);
-            
-            /* modulos de la app */
-            if (is_array($MODULES)){
-                $this->_modules = $MODULES;    
+
+            /* Modulos de la app.
+               Si no esta definido en la configuracion, carga los modulos por defecto
+             */
+            if (is_array(unserialize(MODULES)) && count(unserialize(MODULES)) > 0 ){
+                $this->_modules = unserialize(MODULES); 
             }else{
                 $this->_modules = array('usuarios','reportes', 'settings');
-                //$this->_view->assign('_error', 'Uno o mas modulos no han podido cargarse');
+        
             }
             
             $this->_modulo = strtolower(array_shift($url));

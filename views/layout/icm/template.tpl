@@ -17,7 +17,7 @@
 <div class="container-fluid">
 
 <!-- Menu Sidebar -->
-
+    
     {if isset($widgets.sidebar)}
         {foreach from=$widgets.sidebar item=wd}
             {$wd}
@@ -28,7 +28,7 @@
 
     <div class="row">
 
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div class="col-sm-6 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <noscript><p>Para el correcto funcionamiento debe tener el soporte para javascript habilitado</p></noscript>
 
             {if isset($_error)}
@@ -44,8 +44,17 @@
                     {$_mensaje}
                 </div>
             {/if}
+        <div class="col-md-9">
+
             {include file=$_contenido}
-            
+        </div>   
+        </div>
+        <div class="col-md-2">
+                {if isset($widgets.nav)}
+                    {foreach from=$widgets.nav item=nav}
+                        {$nav}
+                    {/foreach}
+                {/if}
         </div>
 
     </div>

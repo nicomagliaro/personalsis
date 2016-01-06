@@ -26,7 +26,7 @@ class Bootstrap
                 $rutaControlador = ROOT . 'modules'. DS . $modulo . DS . 'controllers' . DS . $controller . '.php';
             }
             else{
-                throw new Exception('Error de base de modulo');
+                throw new Exception('Error de base de modulo ');
             }
         }
         else{

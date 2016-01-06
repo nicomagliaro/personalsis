@@ -31,7 +31,14 @@ class menuModelWidget extends Model
                             'enlace' =>  BASE_URL . 'acl',
                             'divider' => false,
                             'imagen' => 'glyphicon-expand'
-                        )
+                        ),
+
+                        array(
+                            'id' => 'registro',
+                            'titulo' => 'Registro',
+                            'enlace' => BASE_URL . 'usuarios/registro',
+                            'imagen' => 'icon-user'
+                            )
 
             ),
 
@@ -65,8 +72,19 @@ class menuModelWidget extends Model
                             'enlace' => BASE_URL . 'lotes/sede',
                             'divider' => true,
                             'imagen' => 'glyphicon-expand'
-                        )
+                        ),
 
+
+            ),
+
+            array(
+                'id' => 'reportes',
+                'titulo' => 'Reportes',
+                'enlace' => '#',
+                'divider' => true,
+                'imagen' => 'glyphicon-chevron-left',
+                'submenu' =>
+                        array()
             )
 
         );
@@ -88,6 +106,7 @@ class menuModelWidget extends Model
                 'id' => 'settings',
                 'titulo' => 'Settings',
                 'enlace' => '#',
+                'divider' => false,
                 'imagen' => 'glyphicon-cog',
                 'submenu' =>
                     array(
@@ -95,29 +114,29 @@ class menuModelWidget extends Model
 
                 )
             
-
-            /*array(
-                'id' => 'notificaciones',
-                'titulo' => 'Notificaciones',
-                'enlace' => '#',
-                'imagen' => 'glyphicon-cog',
-                'submenu' =>
-                    array(
-
-                )
-            ),
-
-            array(
-                'id' => 'ayuda',
-                'titulo' => 'Ayuda',
-                'enlace' => '#',
-                'imagen' => 'glyphicon-cog',
-                'submenu' =>
-                    array(
-
-                    )
-            )*/
         
+        );
+
+         $menus['nav'] = array(
+            array(
+                'id' => 'usuarios',
+                'titulo' => 'Usuarios',
+                'enlace' => BASE_URL . 'usuarios',
+                'imagen' => 'icon-user'
+                ),
+            array(
+                'id' => 'registro',
+                'titulo' => 'Registro',
+                'enlace' => BASE_URL . 'usuarios/registro',
+                'imagen' => 'icon-user'
+                ),
+            
+            array(
+                'id' => 'acl',
+                'titulo' => 'Listas de control de acceso',
+                'enlace' => BASE_URL . 'acl',
+                'imagen' => 'icon-list-alt'
+                )
         );
 
         if(Session::get('autenticado')){
@@ -131,7 +150,7 @@ class menuModelWidget extends Model
             $menus['top'][1]['submenu'] = array(
                 'id' => 'menus',
                 'titulo' => 'Menus',
-                'enlace' => BASE_URL . 'settings/menu',
+                'enlace' => BASE_URL . 'settings/menus',
                 'divider' => false,
                 'imagen' => 'glyphicon-expand'
             );

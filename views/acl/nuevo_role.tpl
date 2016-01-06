@@ -14,6 +14,9 @@
             <td><input type="text" name="role" value="{$datos.role|default:""}"></td>
         </tr>
     </table>
-        
-    <p><button type="submit" class="btn btn-primary"><li class="icon-ok icon-white"> </li> Guardar</button></p>
+<ul class="list-inline">        
+    <li><button type="submit" class="btn btn-primary"><li class="icon-ok icon-white"> </li> Guardar</button></li>
+    <li><a class="btn btn-primary" href="{$_layoutParams.root}acl"><i class="glyphicon glyphicon-backward icon-white"> </i> Volver</a></li>
+</ul>
+
 </form>

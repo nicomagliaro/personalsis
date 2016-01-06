@@ -2,23 +2,25 @@
 
 class crearController extends settingsController
 {
-    private $_login;
+    private $_menu;
     
     public function __construct()
     {
         parent::__construct();
-        $this->_login = $this->loadModel('menu');
+        $this->_menu = $this->loadModel('menu');
     }
     
     public function index()
     {
-        if(Session::get('autenticado')){
-            $this->redireccionar();
+        if(!Session::get('autenticado')){
+            $this->redireccionar('error/access/5050');
         }
-        
+       
         $this->_view->assign('titulo', 'Nuevo Menu');
-        return;
-     }   
+        $this->_view->renderizar('crear', 'crear');
+     }
+
+        
 }
 
 ?>

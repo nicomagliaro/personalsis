@@ -2,7 +2,7 @@
 
 class editarController extends settingsController
 {
-    private $_registro;
+    private $_menu;
 
     public function __construct() {
         parent::__construct();
@@ -11,17 +11,18 @@ class editarController extends settingsController
             $this->redireccionar('error/access/5050');
         }
 
-        $this->_registro = $this->loadModel('menu');
+        $this->_menu = $this->loadModel('menu');
         
     }
 
     public function index()
     {
-        if(Session::get('autenticado')){
-            $this->redireccionar();
+        if(!Session::get('autenticado')){
+            $this->redireccionar('error/access/5050');
         }
+        
         $this->_view->assign('titulo', 'Editar Menus');
-        return;
+        $this->_view->renderizar('menu', 'editar');
     }
         
 }

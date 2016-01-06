@@ -7,15 +7,17 @@
  * Controller.php
  * -------------------------------------
  */
-
+include  LOG_LIB;
 
 abstract class Controller
 {
     private $_registry; 
+    private $_Log;
     protected $_view;
     protected $_acl;
     protected $_request;
     protected $_menu;
+    protected $_ip;
     
     public function __construct() 
     {
@@ -24,6 +26,9 @@ abstract class Controller
         $this->_acl = $this->_registry->_acl;
         $this->_request = $this->_registry->_request;
         $this->_view = new View($this->_request, $this->_acl);
+        $this->_ip = new Env_ip();
+        $this->_Log = new logsModel();
+        
     }
     
     abstract public function index();
@@ -154,6 +159,14 @@ abstract class Controller
             return trim($_POST[$clave]);
         }
         
+    }
+
+
+    protected function getParam($clave)
+    {
+        if(isset($_POST[$clave])){
+            return $_POST[$clave];
+        }
     }
 }
 

@@ -20,7 +20,7 @@ class View extends Smarty
     private $_cssPlugin;
     private $_template;
     #private $_menu;
-    private static $_item; /* Devuelve el id de la vista Ej: para cargar estilos */
+    private static $_item; /* Devuelve el id de la vista Ej: para cargar estilos o ocultar/mostrar Widgets/Menus */
     private $_widget; /* Setea los parametros desde el controlador Ej: inverse */
 
     public function __construct(Request $peticion, ACL $_acl)
@@ -33,49 +33,7 @@ class View extends Smarty
         $this->_jsPlugin = array();
         $this->_cssPlugin = array();
         $this->_template = DEFAULT_LAYOUT;
-        self::$_item = null;
-
-        /* Enable Menu from DB
-         * public function __construct(Request $reqst, Menu $menu) {
-                parent::__construct();
-                $this->_template = DEFAULT_TEMP;
-                $this->_controller = $reqst->get_controller();
-                $this->_js = array();
-                $this->_jslib = array();
-                $this->_menu = $menu;
-                }
-
-                In function render add
-
-                public function render($view, $item = false)
-                {
-
-                if(count($this->_menu)){
-                $menu = $this->_menu->getmenu();
-                }
-                
-         *      and in params return the menu
-
-                $_params = array(
-                'menu' => $menu
-         * And finally add this in template.tpl
-
-            <ul id="nav">
-            {section name=i loop=$_layoutParams.menu}
-            <li {if $_layoutParams.item == $_layoutParams.menu.id}class="active"{else}{/if}><a href="{$_layoutParams.root}{$_layoutParams.menu.link}">{$_layoutParams.menu.title}</a>
-            <ul>
-            {if is_array($_layoutParams.menu.submenu)}
-            {section name=j loop=$_layoutParams.menu.submenu}
-            <li><a href="{$_layoutParams.root}{$_layoutParams.menu.submenu[j].link}">{$_layoutParams.menu.submenu[j].title}</a></li>
-            {/section}
-            {/if}
-            </ul>
-            </li>
-            {/section}
-            </nav>
-         * 
-         */
-        
+        self::$_item = null;  
         $modulo = $this->_request->getModulo();
         $controlador = $this->_request->getControlador();
 
@@ -130,7 +88,7 @@ class View extends Smarty
             $this->assign('_contenido', $this->_rutas['view'] . $vista . '.tpl');
         }
         else {
-            throw new Exception('Error de vista');
+            throw new Exception('Error de vista   ');
         }
 
         $this->assign('widgets', $this->getWidgets());
@@ -237,6 +195,10 @@ class View extends Smarty
             'menu-top' => array(
                 'config' => $this->widget('menu', 'getConfig', array('top')),
                 'content' => array('menu', 'getMenu', array('top', 'top'))
+            ),
+            'menu-nav' => array(
+                'config' => $this->widget('menu', 'getConfig', array('nav')),
+                'content' => array('menu', 'getMenu', array('nav', 'nav'))
             )
         );
 

@@ -20,6 +20,6 @@ class indexController extends lotesController
 
     public function index() {
         $this->_view->assign('titulo', 'Catálogos');
-        $this->_view->renderizar('index', 'index');
+        $this->_view->renderizar('index', 'indice_catalogo');
     }
 }

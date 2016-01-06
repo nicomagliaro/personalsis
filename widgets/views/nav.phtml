@@ -1,0 +1,17 @@
+<?php if(Session::get('level') == 1): ?>
+
+<ul class="nav nav-tabs nav-stacked">
+    <?php foreach($menu as $m): ?>
+        <?php if(isset($id)): ?>
+            <?php $_style = 'active'; ?>
+        <?php else: ?>
+            <?php $_style = ''; ?>
+        <?php endif; ?>
+
+        <li class="<?php echo $_style; ?>">
+            <a  href="<?php echo $m['enlace']; ?>"><i class="<?php echo $m['imagen']; ?>"> </i> <?php echo $m['titulo']; ?></a>
+        </li>
+    <?php endforeach; ?>
+</ul>
+
+<?php endif; ?>

@@ -20,5 +20,10 @@
         </tr>
     </table>
         
-    <p><button type="submit" class="btn btn-primary"><li class="icon-ok icon-white"> </li> Entrar</button></p>
+    <p>
+        <button type="submit" class="btn btn-primary">
+            <li class="icon-ok icon-white"> </li> 
+            Entrar
+        </button>
+    </p>
 </form>

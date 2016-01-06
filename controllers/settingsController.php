@@ -2,6 +2,7 @@
 
 class settingsController extends Controller
 {
+	
     public function __construct()
     {
         parent::__construct();
@@ -9,10 +10,10 @@ class settingsController extends Controller
         if(!Session::get('autenticado')){
             $this->redireccionar('error/access/5050');
         }
+
     }
 
-    public function index()
-    {}
+    public function index(){}
 }
 
 ?>

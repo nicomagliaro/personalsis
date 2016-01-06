@@ -21,23 +21,31 @@ define('HASH_KEY', '4f6a6d832be79');
 
 /* Enable App Modules */
 
-$MODULES  = array('usuarios',
+$MODULES  = array(  'usuarios',
                     'reportes',
-                    'settings'
-			);
+                    'settings',
+                    'lotes'
 
-/*const MODULES = array( 'usuarios',
-                       'reportes', 
-                       'lotes',
-                       'monitoreo', 
-                       'settings')
-        );
-*/
+			);
+define('MODULES', serialize($MODULES));
+
 /* DBA Settings */
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '123456');
 define('DB_NAME', 'portal-icm');
 define('DB_CHAR', 'utf8');
+
+# LOGGIN CONFIGS
+
+/**
+ * Database Table Constants - these constants
+ * hold the names of all the database tables used
+ * in the script.
+ */
+define("TBL_LOG", "log");     //Database where logs will be stored
+// Security constant, the one you'll have to use in order to delete the log:
+define("LOG_PASS", ""); //MUST be sha1 encoded 
+define("LOG_LIB", ROOT."models/logsModel.php");
 
 ?>

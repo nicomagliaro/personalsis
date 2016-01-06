@@ -49,6 +49,19 @@ class ACL
         return $role['role'];
     }
     
+    public function getUserRoleId($user_id)
+    {
+        
+        echo $user_id;exit;
+        echo $this->_db->query(
+                "SELECT id_role ".
+                "FROM roles " .
+                "WHERE id = {$user_id}"
+                );exit;
+            
+        return $role;
+    }
+
     public function getPermisosRoleId()
     {
         $ids = $this->_db->query(
