@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2016-01-01 15:42:43
+<?php /* Smarty version Smarty-3.1.8, created on 2016-01-06 22:33:14
          compiled from "/Users/nicom/Sites/portalicm/views/layout/icm/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:176559414855a26b785d7da1-92946392%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -19,7 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0f59ac523a9a6678e115362f68904e2bab1bfb00' => 
     array (
       0 => '/Users/nicom/Sites/portalicm/views/layout/icm/template.tpl',
-      1 => 1451659129,
+      1 => 1452115917,
       2 => 'file',
     ),
   ),
@@ -37,6 +37,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '_error' => 0,
     '_mensaje' => 0,
     '_contenido' => 0,
+    'nav' => 0,
     '_layoutParams' => 0,
     'plg' => 0,
     'js' => 0,
@@ -120,7 +121,7 @@ $_smarty_tpl->tpl_vars['tp']->_loop = true;
 <div class="container-fluid">
 
 <!-- Menu Sidebar -->
-
+    
     <?php if (isset($_smarty_tpl->tpl_vars['widgets']->value['sidebar'])){?>
         <?php  $_smarty_tpl->tpl_vars['wd'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['wd']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['widgets']->value['sidebar']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -136,27 +137,40 @@ $_smarty_tpl->tpl_vars['wd']->_loop = true;
 
     <div class="row">
 
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div class="col-sm-6 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <noscript><p>Para el correcto funcionamiento debe tener el soporte para javascript habilitado</p></noscript>
 
             <?php if (isset($_smarty_tpl->tpl_vars['_error']->value)){?>
-                <div id="_errl" class="alert alert-error">
-                    <a class="close" data-dismiss="alert">x</a>
-                    <?php echo $_smarty_tpl->tpl_vars['_error']->value;?>
+                
+                <div id="_errl" class="alert alert-error" role="alert">
+                   <?php echo $_smarty_tpl->tpl_vars['_error']->value;?>
 
                 </div>
             <?php }?>
 
             <?php if (isset($_smarty_tpl->tpl_vars['_mensaje']->value)){?>
-                <div id="_msgl" class="alert alert-success">
-                    <a class="close" data-dismiss="alert">x</a>
+                <div id="_msgl" class="alert alert-success" role="alert">
                     <?php echo $_smarty_tpl->tpl_vars['_mensaje']->value;?>
 
                 </div>
             <?php }?>
+        <div class="col-md-9">
+
             <?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['_contenido']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
-            
+        </div>   
+        </div>
+        <div class="col-md-2">
+                <?php if (isset($_smarty_tpl->tpl_vars['widgets']->value['nav'])){?>
+                    <?php  $_smarty_tpl->tpl_vars['nav'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['nav']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['widgets']->value['nav']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['nav']->key => $_smarty_tpl->tpl_vars['nav']->value){
+$_smarty_tpl->tpl_vars['nav']->_loop = true;
+?>
+                        <?php echo $_smarty_tpl->tpl_vars['nav']->value;?>
+
+                    <?php } ?>
+                <?php }?>
         </div>
 
     </div>

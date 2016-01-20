@@ -1,26 +1,19 @@
-<style type="text/css">
-    table.table td { vertical-align: middle; }
-    table.table td input { margin: 0; }
-</style>
 
 <h2>Nuevo Permiso</h2>
-
+<div class="col-md-6">
 <form name="form1" method="post" action="">
     <input type="hidden" name="guardar" value="1">
-    
-    <table class="table table-bordered" style="width: 350px;">
-        <tr>
-            <td style="text-align: right;">Permiso: </td>
-            <td><input type="text" name="permiso" value="{$datos.permiso|default:""}"></td>
-        </tr>
-
-        <tr>
-            <td style="text-align: right;">Key: </td>
-            <td><input type="text" name="key" value="{$datos.key|default:""}"></td>
-        </tr>
-    </table>
- <ul class="list-inline">       
-    <li><button type="submit" class="btn btn-primary"><li class="icon-ok icon-white"> </li> Guardar</button></li>
-    <li><a class="btn btn-primary" href="{$_layoutParams.root}acl"><i class="glyphicon glyphicon-backward icon-white"> </i> Volver</a></li>
-</ul>
+    <div>
+        <label for="inputText">Permiso</label>
+        <input type="text" class="form-control" name="permiso" id="inputText" placeholder="Ingresar Role" value="{$datos.permiso|default:""}">
+    </div>
+    <div>
+        <label for="inputText">Key</label>
+        <input type="text" class="form-control" name="key" id="inputText" placeholder="Ingresar Role" name="key" value="{$datos.key|default:""}">
+    </div><br>
+    <div class="btn-group" role="group">       
+        <button type="submit" class="btn btn-primary"><i class="icon-ok icon-white">Guardar</i></button>
+        <button class="btn btn-primary" href="{$_layoutParams.root}acl"><i class="glyphicon glyphicon-backward icon-white"> </i> Volver</button>
+    </div>
 </form>
+</div>

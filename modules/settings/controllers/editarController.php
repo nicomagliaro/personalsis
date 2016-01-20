@@ -2,7 +2,7 @@
 
 class editarController extends settingsController
 {
-    private $_menu;
+    protected $_menu;
 
     public function __construct() {
         parent::__construct();

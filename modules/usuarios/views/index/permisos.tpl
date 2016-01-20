@@ -19,11 +19,9 @@
                     {assign var="v" value="habilitado"}
                 {else}
                     {assign var="v" value="denegado"}
-                {/if}
-                
+                {/if}               
                 <tr>
                     <td>{$usuario.$pr.permiso}</td>
-
                     <td>
                         <select name="perm_{$usuario.$pr.id}">
                             <option value="x"{if $usuario.$pr.heredado} selected="selected"{/if}>Heredado({$v})</option>
@@ -32,10 +30,12 @@
                         </select>
                     </td>
                 </tr>
-
             {/foreach}
         </table>
+    <div class="btn-group" role="group">       
+        <button type="submit" class="btn btn-primary"><i class="icon-ok icon-white">Guardar</i></button>
+        <button class="btn btn-primary" href="{$_layoutParams.root}acl"><i class="glyphicon glyphicon-backward icon-white"> </i> Volver</button>
+    </div>
 
-        <p><button type="submit" value="guardar" class="btn btn-primary"><i class="icon-ok icon-white"> </i> Guardar</button></p>
     {/if}
 </form>

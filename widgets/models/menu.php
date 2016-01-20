@@ -37,7 +37,7 @@ class menuModelWidget extends Model
                             'id' => 'registro',
                             'titulo' => 'Registro',
                             'enlace' => BASE_URL . 'usuarios/registro',
-                            'imagen' => 'icon-user'
+                            'imagen' => 'glyphicon-expand'
                             )
 
             ),
@@ -138,7 +138,7 @@ class menuModelWidget extends Model
                 'imagen' => 'icon-list-alt'
                 )
         );
-
+        
         if(Session::get('autenticado')){
             $menus['top'][0]['submenu'] = array(
                 'id' => 'cerrar',

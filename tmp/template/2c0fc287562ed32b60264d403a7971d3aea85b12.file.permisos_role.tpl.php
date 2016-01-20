@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2015-12-31 15:01:03
+<?php /* Smarty version Smarty-3.1.8, created on 2016-01-04 00:05:57
          compiled from "/Users/nicom/Sites/portalicm/views/acl/permisos_role.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:4491637935685351f987141-69000050%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2c0fc287562ed32b60264d403a7971d3aea85b12' => 
     array (
       0 => '/Users/nicom/Sites/portalicm/views/acl/permisos_role.tpl',
-      1 => 1428523765,
+      1 => 1451862124,
       2 => 'file',
     ),
   ),
@@ -15,15 +15,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_5685351f9cab12_14007696',
   'variables' => 
   array (
     'role' => 0,
     'permisos' => 0,
     'pr' => 0,
+    '_layoutParams' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_5685351f9cab12_14007696',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5685351f9cab12_14007696')) {function content_5685351f9cab12_14007696($_smarty_tpl) {?><h2>Administracion de permisos de role</h2>
 
@@ -61,6 +62,10 @@ $_smarty_tpl->tpl_vars['pr']->_loop = true;
             <?php } ?>
         </table>
     <?php }?>
-    
-    <p><button type="submit" class="btn btn-primary"><i class="icon-ok icon-white"> </i> Guardar</button></p>
+ <ul class="list-inline">   
+    <li><button type="submit" class="btn btn-primary"><i class="icon-ok icon-white"> </i> Guardar</button></li>
+
+    <li><a class="btn btn-primary" href="<?php echo $_smarty_tpl->tpl_vars['_layoutParams']->value['root'];?>
+acl"><i class="glyphicon glyphicon-backward icon-white"> </i> Volver</a></li>
+</ul>
 </form> <?php }} ?>

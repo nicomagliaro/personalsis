@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2015-07-12 17:59:17
+<?php /* Smarty version Smarty-3.1.8, created on 2016-01-03 19:45:48
          compiled from "/Users/nicom/Sites/portalicm/modules/usuarios/views/login/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:130279640155a28ed57f1786-29529389%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ec0d41972b39704b9d45a8635f7ff71a0094a1e5' => 
     array (
       0 => '/Users/nicom/Sites/portalicm/modules/usuarios/views/login/index.tpl',
-      1 => 1428523749,
+      1 => 1451845502,
       2 => 'file',
     ),
   ),
@@ -15,13 +15,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_55a28ed5852f69_18489504',
   'variables' => 
   array (
     'datos' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_55a28ed5852f69_18489504',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_55a28ed5852f69_18489504')) {function content_55a28ed5852f69_18489504($_smarty_tpl) {?><style type="text/css">
     table.table td { vertical-align: middle; }
@@ -46,5 +46,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </tr>
     </table>
         
-    <p><button type="submit" class="btn btn-primary"><li class="icon-ok icon-white"> </li> Entrar</button></p>
+    <p>
+        <button type="submit" class="btn btn-primary">
+            <li class="icon-ok icon-white"> </li> 
+            Entrar
+        </button>
+    </p>
 </form><?php }} ?>

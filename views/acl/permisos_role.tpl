@@ -25,9 +25,8 @@
             {/foreach}
         </table>
     {/if}
- <ul class="list-inline">   
-    <li><button type="submit" class="btn btn-primary"><i class="icon-ok icon-white"> </i> Guardar</button></li>
-
-    <li><a class="btn btn-primary" href="{$_layoutParams.root}acl"><i class="glyphicon glyphicon-backward icon-white"> </i> Volver</a></li>
-</ul>
+  <div class="btn-group" role="group">       
+        <button type="submit" class="btn btn-primary"><i class="icon-ok icon-white">Guardar</i></button>
+        <button class="btn btn-primary" href="{$_layoutParams.root}acl"><i class="glyphicon glyphicon-backward icon-white"> </i> Volver</button>
+    </div>
 </form> 

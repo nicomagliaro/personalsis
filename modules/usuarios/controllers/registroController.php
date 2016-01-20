@@ -20,6 +20,7 @@ class registroController extends Controller
         $this->_view->assign('titulo', 'Registro');
         
         if($this->getInt('enviar') == 1){
+            
             $this->_view->assign('datos', $_POST);
             
             if(!$this->getSql('nombre')){
@@ -34,11 +35,11 @@ class registroController extends Controller
                 exit;
             }
             
-            if($this->_registro->verificarUsuario($this->getAlphaNum('usuario'))){
+            /*if($this->_registro->verificarUsuario($this->getAlphaNum('usuario'))){
                 $this->_view->assign('_error', 'El usuario ' . $this->getAlphaNum('usuario') . ' ya existe');
                 $this->_view->renderizar('index', 'registro');
                 exit;
-            }           
+            } */          
             
             if(!$this->getSql('pass')){
                 $this->_view->assign('_error', 'Debe introducir su password');
@@ -62,13 +63,13 @@ class registroController extends Controller
                     $this->getParam('email')
                     );
             
-            $usuario = $this->_registro->verificarUsuario($this->getAlphaNum('usuario'));
+            /*$usuario = $this->_registro->verificarUsuario($this->getAlphaNum('usuario'));
             
             if(!$usuario){
                 $this->_view->assign('_error', 'Error al registrar el usuario');
                 $this->_view->renderizar('index', 'registro');
                 exit;
-            }
+            }*/
             
             /*$mail->From = 'www.mvc.dlancedu.com';
             $mail->FromName = 'Tutorial MVC';

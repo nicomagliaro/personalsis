@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2016-01-01 14:49:38
+<?php /* Smarty version Smarty-3.1.8, created on 2016-01-04 00:00:41
          compiled from "/Users/nicom/Sites/portalicm/views/acl/permisos.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:392838976568683f2599731-55113450%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f1448f2545b5107a2fafbe0d4eafe9d16da3aae8' => 
     array (
       0 => '/Users/nicom/Sites/portalicm/views/acl/permisos.tpl',
-      1 => 1428523766,
+      1 => 1451862035,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_568683f25d85e6_91062243',
   'variables' => 
   array (
     'permisos' => 0,
@@ -22,8 +24,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '_layoutParams' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_568683f25d85e6_91062243',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_568683f25d85e6_91062243')) {function content_568683f25d85e6_91062243($_smarty_tpl) {?><h2>Administración de permisos</h2>
 
@@ -56,6 +56,10 @@ $_smarty_tpl->tpl_vars['rl']->_loop = true;
     
 </table>
 <?php }?>
+<ul class="list-inline">
+<li><a href="<?php echo $_smarty_tpl->tpl_vars['_layoutParams']->value['root'];?>
+acl/nuevo_permiso" class="btn btn-primary"><i class="icon-plus-sign icon-white"> </i> Agregar Permiso</a></li>
 
-<p><a href="<?php echo $_smarty_tpl->tpl_vars['_layoutParams']->value['root'];?>
-acl/nuevo_permiso" class="btn btn-primary"><i class="icon-plus-sign icon-white"> </i> Agregar Permiso</a></p><?php }} ?>
+<li><a class="btn btn-primary" href="<?php echo $_smarty_tpl->tpl_vars['_layoutParams']->value['root'];?>
+acl"><i class="glyphicon glyphicon-backward icon-white"> </i> Volver</a></li>
+</ul><?php }} ?>

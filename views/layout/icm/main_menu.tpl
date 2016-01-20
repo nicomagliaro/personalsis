@@ -16,10 +16,10 @@
       <ul class="nav navbar-nav navbar-right">
         {if Session::get('autenticado')}
         <li>
-          <a href="#" class="dropdown-toggle glyphicon glyphicon-user" data-toggle="dropdown"></a>
+          <a id="tip1" href="#" class="dropdown-toggle glyphicon glyphicon-user" data-toggle="dropdown tooltip" data-placement="bottom" title="{Session::get('user')|default:'User'}"></a>
           <ul class="dropdown-menu dropdown-menu-right" role="menu">
             <li>
-              <a href="{$_layoutParams.root}usuarios/login/cerrar">Cerrar <span class="glyphicon glyphicon-expand pull-right"></span></a>
+              <a href="{$_layoutParams.root}usuarios/login/cerrar" >Cerrar <span class="glyphicon glyphicon-expand pull-right"></span></a>
             </li>
           </ul>
         </li>
@@ -33,7 +33,7 @@
         </li>
         {else}
         <li>
-          <a href="#" class="dropdown-toggle glyphicon glyphicon-user" data-toggle="dropdown"></a>
+          <a id="tip1" href="#" class="dropdown-toggle glyphicon glyphicon-user" data-toggle="dropdown tooltip" data-placement="bottom" title="{Session::get('user')|default:'User'}"></a>
           <ul class="dropdown-menu dropdown-menu-right" role="menu">
             <li>
               <a href="{$_layoutParams.root}usuarios/login">Entrar<span class="glyphicon glyphicon-expand pull-right"></span></a>

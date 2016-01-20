@@ -32,15 +32,14 @@
             <noscript><p>Para el correcto funcionamiento debe tener el soporte para javascript habilitado</p></noscript>
 
             {if isset($_error)}
-                <div id="_errl" class="alert alert-error">
-                    <a class="close" data-dismiss="alert">x</a>
-                    {$_error}
+                
+                <div id="_errl" class="alert alert-error" role="alert">
+                   {$_error}
                 </div>
             {/if}
 
             {if isset($_mensaje)}
-                <div id="_msgl" class="alert alert-success">
-                    <a class="close" data-dismiss="alert">x</a>
+                <div id="_msgl" class="alert alert-success" role="alert">
                     {$_mensaje}
                 </div>
             {/if}

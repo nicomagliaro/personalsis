@@ -27,13 +27,16 @@
                 <li class="divider"></li>
                 <?php endif; ?>
                 <li>
-                    <a href="<?=$item['enlace']?>" class="dropdown-toggle glyphicon <?=$item['imagen']?>" data-toggle="dropdown"></a>
+                    <a id="tip1" href="<?=$item['enlace']?>" class="dropdown-toggle glyphicon <?=$item['imagen']?>" data-toggle="dropdown" data-placement="left" title="<?= (Session::get('usuario')) ? Session::get('usuario') : 'Login' ?>">
+                    </a>
 
                        <?php foreach($item as $subitem): ?>
                             <?php if(isset($subitem['enlace']) && sizeof($subitem['enlace'] > 0)): ?>
                 <ul class="dropdown-menu dropdown-menu-right" role="menu">
                     <li>
-                      <a href="<?=$subitem['enlace'];?>"><?=$subitem['titulo'];?> <span class="glyphicon <?=$subitem['imagen']?> pull-right"></span></a>
+                      <a href="<?=$subitem['enlace'];?>"><?=$subitem['titulo'];?> 
+                        <span class="glyphicon <?=$subitem['imagen']?> pull-right"></span>
+                      </a>
                     </li>
                 </ul>
                             <?php endif; ?>

@@ -24,3 +24,6 @@
         {/foreach}
     </table>
 {/if}
+
+<a class="btn btn-primary" href="{$_layoutParams.root}"><i class="glyphicon glyphicon-backward icon-white"> </i> Volver
+</a>

@@ -21,7 +21,7 @@
         {/foreach}
     </table>
 {/if}
-<ul class="list-inline">
-<li><a class="btn btn-primary" href="{$_layoutParams.root}acl/nuevo_role"><i class="icon-plus-sign icon-white"> </i> Agregar Role</a></li>
-<li><a class="btn btn-primary" href="{$_layoutParams.root}acl"><i class="glyphicon glyphicon-backward icon-white"> </i> Volver</a></li>
-</ul>
+<div class="btn-group" role="group">       
+    <a href="{$_layoutParams.root}acl/nuevo_role"><button type="submit" class="btn btn-primary"><i class="icon-plus-sign icon-white"></i>Agregar Role</button>
+    <button class="btn btn-primary" href="{$_layoutParams.root}acl"><i class="glyphicon glyphicon-backward icon-white"> </i> Volver</button>
+</div>

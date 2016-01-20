@@ -28,6 +28,7 @@ abstract class Controller
         $this->_view = new View($this->_request, $this->_acl);
         $this->_ip = new Env_ip();
         $this->_Log = new logsModel();
+        $this->_view->setJsPlugin(array('tooltip'));
         
     }
     
