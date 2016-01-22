@@ -18,6 +18,7 @@ abstract class Controller
     protected $_request;
     protected $_menu;
     protected $_ip;
+    protected $_oemail;
     
     public function __construct() 
     {
@@ -28,7 +29,9 @@ abstract class Controller
         $this->_view = new View($this->_request, $this->_acl);
         $this->_ip = new Env_ip();
         $this->_Log = new logsModel();
+        $this->getLibrary('class.oemail'); // Carga la libreria de validacion de email
         $this->_view->setJsPlugin(array('tooltip'));
+
         
     }
     
@@ -61,7 +64,8 @@ abstract class Controller
     
     protected function getLibrary($libreria)
     {
-        $rutaLibreria = ROOT . 'libs' . DS . $libreria . '.php';
+        $lib_folder = explode('.',$libreria); 
+        $rutaLibreria = ROOT . 'libs' . DS . $lib_folder[1] . DS . $libreria . '.php';
         
         if(is_readable($rutaLibreria)){
             require_once $rutaLibreria;
@@ -100,6 +104,17 @@ abstract class Controller
         else{
             header('location:' . BASE_URL);
             exit;
+        }
+    }
+
+    protected function validarEmail($str)
+    {
+        $this->_oemail = new Email;
+        if($this->_oemail->valida($str)){
+            return $str;
+        }
+        else{
+            return 0;
         }
     }
 
@@ -144,7 +159,7 @@ abstract class Controller
         
     }
     
-    public function validarEmail($email)
+    public function validarEmail_Old($email)
     {
         if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
             return false;

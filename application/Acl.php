@@ -37,6 +37,16 @@ class ACL
                 $this->getPermisosUsuario()
                 );
     }
+
+    public function listarRoles()
+    {
+        $roles = $this->_db->query(
+                "select * from roles"
+                );
+                
+        return $roles->fetchAll();
+        
+    }
     
     public function getRole()
     {
@@ -52,14 +62,15 @@ class ACL
     public function getUserRoleId($user_id)
     {
         
-        echo $user_id;exit;
-        echo $this->_db->query(
+        /*$user_id = int $user_id;
+        $role = $this->_db->query(
                 "SELECT id_role ".
                 "FROM roles " .
                 "WHERE id = {$user_id}"
-                );exit;
+                )
             
-        return $role;
+        return $role;*/
+        return;
     }
 
     public function getPermisosRoleId()

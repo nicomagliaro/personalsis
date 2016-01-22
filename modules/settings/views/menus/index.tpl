@@ -5,13 +5,13 @@
         <div class="list-group">
             <ul class="list-inline">
             	<li class="col-md-7"><a href="{$_layoutParams.root}acl/roles" class="list-group-item">Roles</a></li>
-            	<li><button type="button" class="btn btn btn-info btn-sm">Ver Menu</button></li>
-            	<li><button type="button" class="btn btn btn-warning btn-sm">Editar Menu</button></li>
+            	<li><button type="button" class="btn btn btn-info btn-sm" href="{$_layoutParams.root}settings/menus">Ver Menu</button></li>
+            	<li><button type="button" class="btn btn btn-warning btn-sm" href="{$_layoutParams.root}settings/menus/editar">Editar Menu</button></li>
             </ul>
             <ul class="list-inline">
             	<li class="col-md-7"><a href="{$_layoutParams.root}acl/permisos" class="list-group-item">Permisos</a></li>
-				<li><button type="button" class="btn btn btn-info btn-sm">Ver Menu</button></li>
-            	<li><button type="button" class="btn btn btn-warning btn-sm">Editar Menu</button></li>
+				<li><button type="button" class="btn btn btn-info btn-sm" href="{$_layoutParams.root}settings/menus">Ver Menu</button></li>
+            	<li><button type="button" class="btn btn btn-warning btn-sm" href="{$_layoutParams.root}settings/menus/editar">Editar Menu</button></li>
             </ul>
 			
 			<br>

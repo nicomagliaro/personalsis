@@ -14,9 +14,9 @@ class crearController extends settingsController
     {
         if(!Session::get('autenticado')){
             $this->redireccionar('error/access/5050');
-            $this->_view->assign('menu_dbg', $this->_menus->crearMenus());
+            
         }
-       
+        $this->_view->assign('menu_dbg', $this->_menus->crearMenus());
         $this->_view->assign('titulo', 'Nuevo Menu');
         $this->_view->renderizar('crear', 'crear');
      }

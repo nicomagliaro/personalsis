@@ -28,22 +28,44 @@ class registroModel extends Model
         return false;
     }
     
-    public function registrarUsuario($nombre, $usuario, $password, $email)
+    public function registrarUsuario($nombre, $usuario, $password, $email, $role)
     {
-    	$random = rand(1782598471, 9999999999);
 		
-        $this->_db->prepare(
-                "insert into usuarios values" .
-                "(null, :nombre, :usuario, :password, :email, 4, 0, now(), :codigo)"
+        try {
+
+            $random = rand(1782598471, 9999999999);
+            
+            $this->_db->prepare(
+                "INSERT INTO usuarios (id, nombre, usuario, pass, email, role, estado, fecha, codigo) ".
+                "VALUES ".
+                "(NULL, :nombre, :usuario, :password, :email, :role, 1, NOW(), :codigo)"
                 )
-                ->execute(array(
-                    ':nombre' => $nombre,
-                    ':usuario' => $usuario,
-                    ':password' => Hash::getHash('sha1', $password, HASH_KEY),
-                    ':email' => $email,
-                    ':codigo' => $random
+                ->execute(
+                    array(
+                        ':nombre' => $nombre,
+                        ':usuario' => $usuario,
+                        ':password' => Hash::getHash('sha1', $password, HASH_KEY),
+                        ':email' => $email,
+                        ':role' => $role,
+                        ':codigo' => (string)$random
                 ));
+
+        }
+        catch(Exception $e){
+            die("Un problema interno." . $e);
+
+        }
     }
+
+    /*
+
+    INSERT INTO `usuarios` (`id`, `nombre`, `usuario`, `pass`, `email`, 
+                            `role`, `estado`, `fecha`, `codigo`) 
+                            VALUES (NULL, 'Test1', 'test1', 
+                            'd1b254c9620425f582e27f0044be34bee087d8b4', 'test@test.com', '4',
+                             '1', NOW(), '1000000000');
+
+    */
     
     public function getUsuario($id, $codigo)
 	{

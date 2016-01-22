@@ -30,21 +30,38 @@
 
         <div class="col-sm-6 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <noscript><p>Para el correcto funcionamiento debe tener el soporte para javascript habilitado</p></noscript>
-
-            {if isset($_error)}
-                
-                <div id="_errl" class="alert alert-error" role="alert">
-                   {$_error}
-                </div>
+            <!-- Despliegue mensajes de error -->
+            {if isset($_error)}    
+            <div id="_errl" class="alert alert-danger alert-dismissible" role="alert">
+               <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>{$_error}</strong>
+            </div>
+            {/if}
+            
+            <!-- Despliegue mensajes de alerta -->
+            {if isset($_warning)}
+            <div class="alert alert-warning alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>{$_warning}</strong>
+            </div>
             {/if}
 
-            {if isset($_mensaje)}
-                <div id="_msgl" class="alert alert-success" role="alert">
-                    {$_mensaje}
-                </div>
+            <!-- Despliegue mensajes de exito -->
+            {if isset($_success)}
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>{$_success}</strong>
+            </div>
+            {/if}
+
+            <!-- Despliegue mensajes de información -->
+            {if isset($_info)}
+            <div class="alert alert-info alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>{$_info}</strong>
+            </div>
             {/if}
         <div class="col-md-9">
-
             {include file=$_contenido}
         </div>   
         </div>
