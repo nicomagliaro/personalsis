@@ -9,15 +9,19 @@
  */
 
 /* App Settings */
+define('DOMAIN', 'portalicm.local');
 define('BASE_URL', 'http://portalicm.local/');
 define('DEFAULT_CONTROLLER', 'index');
 define('DEFAULT_LAYOUT', 'icm'); // Name of default template container
 
 define('APP_NAME', 'ICM');
+define('BRAND_ICO', 'public/img/brand.png'); // Set a 50x50 px Image
 define('APP_SLOGAN', 'Portal');
 define('APP_COMPANY', 'ICM');
 define('SESSION_TIME', 0); //Set +integer value in minutes or Set value to 0 for endless session
 define('HASH_KEY', '4f6a6d832be79');
+
+define('ENABLE_COOKIES', 0); // 1 to enable creation of cookies
 
 /* Enable App Modules */
 

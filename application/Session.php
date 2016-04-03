@@ -6,6 +6,7 @@ class Session
     public static function init()
     {
         session_start();
+        //setCookieSession(array('Prueba de cookie'));
     }
     
     public static function destroy($clave = false)
@@ -145,6 +146,50 @@ class Session
         else{
             Session::set('tiempo', time());
         }
+    }
+
+    protected function setCookieSession(array $cookies)
+    {
+        
+        if(!Session::get('autenticado')){
+            return false;
+        }
+
+        if(!ENABLE_COOKIES){
+            return false;
+        }
+
+        if(!is_array($cookies) or empty($cookies))
+        {
+            return false;
+        }   
+
+        
+        $ar = array_map('strip_tags', $cookies);
+        $cookie_name = Hash::getHash('sha1',Session::get('usuario'),HASH_KEY);
+        
+        for ($i=1;count($ar);$i++) {
+               setcookie($cookie_name, $i, time() + 3600, "", DOMAIN, 0);
+        }   
+            
+         
+        return true;
+
+    }
+
+    protected function deleteCookie(array $cookies)
+    {
+        if(!Session::get('autenticado')){
+            return false;
+        }
+
+        if(!is_array($cookies) or empty($cookies)){
+            return false;
+        }
+
+        setcookie($cookie_name, "", time() - 3600, "", DOMAIN, 0);
+
+        return true;
     }
 }
 
