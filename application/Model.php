@@ -18,6 +18,15 @@ class Model
         $this->_registry = Registry::getInstancia();
         $this->_db = $this->_registry->_db;
     }
+
+
+    public function getRoles()
+    {
+        $roles = $this->_db->query(
+                "select id_role, role from roles"
+                );
+        return $roles->fetchAll();
+    }
 }
 
 ?>

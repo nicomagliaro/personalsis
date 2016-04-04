@@ -19,6 +19,7 @@ abstract class Controller
     protected $_menu;
     protected $_ip;
     protected $_oemail;
+    protected $_roles;
     
     public function __construct() 
     {
@@ -31,6 +32,7 @@ abstract class Controller
         $this->_Log = new logsModel();
         $this->getLibrary('class.oemail'); // Carga la libreria de validacion de email
         $this->_view->setJsPlugin(array('tooltip'));
+        $this->_roles = new ACL;
 
         
     }

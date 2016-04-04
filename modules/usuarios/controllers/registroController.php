@@ -3,7 +3,7 @@
 class registroController extends Controller
 {
     private $_registro;
-    private $_roles;
+    
     
     public function __construct() {
         parent::__construct();
@@ -11,7 +11,7 @@ class registroController extends Controller
         $this->_registro = $this->loadModel('registro');
         $this->_view->setTemplate('icm');
         $this->_view->setWidgetOptions('menu-nav', array('nav', 'nav', true));
-        $this->_roles = new ACL;
+        
     }
     
     public function index()
