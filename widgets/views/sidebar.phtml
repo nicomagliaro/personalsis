@@ -11,27 +11,27 @@
         <?php endif; ?>
         
         <?php if(isset($m1['divider']) && $m1['divider']): ?>
-            <li class="divider"></li>
+    <li class="divider"></li>
         <?php endif; ?>
         
     <li class="menu-item dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="<?=$m1['enlace']?>"><?=$m1['titulo']?> 
             <span class="glyphicon <?=$m1['imagen']?> pull-right"></span></a>
-    <ul class="dropdown-menu">        
+    <ul class="dropdown-menu">       
         <?php foreach($m1 as $k1=>$v1): ?>
-            <?php if (is_array($v1)): ?>  
-    <li>
-        <a href="<?=$v1['enlace']?>"><?=$v1['titulo']?>
-            <span class="glyphicon <?=$v1['imagen']?> pull-right"></span>
-        </a>
-    </li>
-               <?php if($v1['divider'] == 1): ?>
-    <li class="divider"></li>
-               <?php endif; ?>
-                 
+            <?php if(is_array($v1) && !empty($v1)): ?>  
+        <li>
+
+            <a href="<?=$v1['enlace']?>"><?=$v1['titulo']?>
+                <span class="glyphicon <?=$v1['imagen']?> pull-right"></span>
+            </a>
+        </li>
+               <?php if($v1['divider'] == true): ?>
+        <li class="divider"></li>
+               <?php endif; ?>  
             <?php endif; ?>     
         <?php endforeach; ?>
-     </ul>   
+    </ul>        
     <?php endforeach; ?>
     </li>   
     </ul>

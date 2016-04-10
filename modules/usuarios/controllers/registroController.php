@@ -118,7 +118,6 @@ class registroController extends Controller
             */
             
             $this->_view->assign('datos', false);
-            //$this->_view->assign('_mensaje', 'Registro Completado, revise su email para activar su cuenta');
             $this->_view->assign('_success', 'Registro Completado, el usuario ha sido creado con exito');
         }    
         

@@ -20,6 +20,20 @@
             <label for="inputEmail">Icono</label>
             <input type="text" class="form-control" id="inputEmail" placeholder="Ingrese glyphicon" name="icono" value="{$datos.icono|default:''}" required>
         </div>
+        <div class="form-group">
+            <label>Tipo de Menu</label>
+            <div class="selectContainer">
+                <select name="mtipo" class="form-control">
+            {if count($mtipo)}
+                {foreach item=t from=$mtipo}
+                    <option value="{$t.idmenu_type}">{$t.name|default:'Tipo de menu'}</option>
+                {/foreach}
+            {else}
+                    <option>No existe registro</option>
+            {/if}                 
+                </select>
+            </div>
+        </div>
         <div class="checkbox form-group">
             <label>
               <input type="checkbox" name="enable_menu" value="Yes" id="enable_menu">Habilitar Menú 

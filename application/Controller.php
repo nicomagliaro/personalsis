@@ -30,11 +30,10 @@ abstract class Controller
         $this->_view = new View($this->_request, $this->_acl);
         $this->_ip = new Env_ip();
         $this->_Log = new logsModel();
-        $this->getLibrary('class.oemail'); // Carga la libreria de validacion de email
+        $this->getLibrary(array('class.oemail', 'class.validators')); // Carga la libreria de validacion de email
         $this->_view->setJsPlugin(array('tooltip'));
         $this->_roles = new ACL;
 
-        
     }
     
     abstract public function index();
@@ -64,17 +63,26 @@ abstract class Controller
         }
     }
     
-    protected function getLibrary($libreria)
+    protected function getLibrary(array $libreria)
     {
-        $lib_folder = explode('.',$libreria); 
-        $rutaLibreria = ROOT . 'libs' . DS . $lib_folder[1] . DS . $libreria . '.php';
+        if(is_array($libreria)){
+
+            for($i=0;$i<sizeof($libreria);$i++){
+             
+                $lib_folder = explode('.',$libreria[$i]); 
+                $rutaLibreria = ROOT . 'libs' . DS . $lib_folder[1] . DS . $libreria[$i] . '.php';
+                
+                if(is_readable($rutaLibreria)){
+                    require_once $rutaLibreria;
+                }
+                else{
+                    throw new Exception('Error de libreria');
+                }
+            }    
+        }else{
+            throw new Exception('Debe ingresar dato como tipo: array()');
+        }
         
-        if(is_readable($rutaLibreria)){
-            require_once $rutaLibreria;
-        }
-        else{
-            throw new Exception('Error de libreria');
-        }
     }
     
     protected function getTexto($clave)

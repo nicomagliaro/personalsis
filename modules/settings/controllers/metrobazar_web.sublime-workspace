@@ -1,0 +1,296 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pro",
+				"protected"
+			],
+			[
+				"_",
+				"_view"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"set",
+				"setcookie"
+			],
+			[
+				"Tr",
+				"true"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Pack",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Local Dependency"
+			],
+			[
+				"ht5",
+				"Snippet: bs3-html5-template"
+			],
+			[
+				"html5",
+				"Snippet: bs3-html5-template"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 457.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/nicom/Sites/metrobazar_web/core/themes/bartik",
+		"/Users/nicom/Sites/metrobazar_web/core/themes/bartik/templates"
+	],
+	"file_history":
+	[
+		"/Users/nicom/Sites/metrobazar_web/sites/default/settings.php",
+		"/Users/nicom/Sites/portalicm/modules/usuarios/controllers/registroController.php",
+		"/Users/nicom/Sites/portalicm/application/Validators.php",
+		"/Users/nicom/Sites/portalicm/application/Controller.php",
+		"/Users/nicom/Sites/portalicm/application/Registry.php",
+		"/Users/nicom/Sites/portalicm/application/Request.php",
+		"/Users/nicom/Sites/portalicm/index.php",
+		"/Users/nicom/Sites/portalicm/application/Acl.php",
+		"/Users/nicom/Sites/portalicm/application/Session.php",
+		"/Users/nicom/Sites/portalicm/modules/settings/views/menus/crear.tpl",
+		"/Users/nicom/Sites/portalicm/modules/usuarios/models/registroModel.php",
+		"/Users/nicom/Sites/portalicm/README.md",
+		"/Users/nicom/Sites/portalicm/.htaccess",
+		"/Users/nicom/Sites/portalicm/modules/settings/controllers/menusController.php",
+		"/Users/nicom/Sites/portalicm/application/Model.php",
+		"/Users/nicom/Sites/portalicm/controllers/usuariosController.php",
+		"/Users/nicom/Sites/portalicm/controllers/settingsController.php",
+		"/Users/nicom/Sites/portalicm/modules/settings/models/menusModel.php",
+		"/Users/nicom/Sites/portalicm/modules/usuarios/models/loginModel.php",
+		"/Users/nicom/Sites/portalicm/modules/usuarios/models/indexModel.php",
+		"/Users/nicom/Sites/portalicm/modules/settings/views/menus/js/menu_actions.js",
+		"/Users/nicom/Sites/portalicm/application/View.php",
+		"/Users/nicom/Sites/portalicm/modules/settings/controllers/crearController.php",
+		"/Users/nicom/Sites/portalicm/modules/settings/views/menus/index.tpl",
+		"/Users/nicom/Sites/mesa/application/View.php",
+		"/Users/nicom/Sites/portalicm/modules/usuarios/views/registro/index.tpl",
+		"/Users/nicom/Sites/portalicm/modules/settings/views/menus/editar.tpl",
+		"/Users/nicom/Sites/portalicm/application/Config.php",
+		"/Users/nicom/Sites/portalicm/widgets/views/top.phtml",
+		"/Datos/Scripts/Python/sent_remote_cmd_shh.py",
+		"/Users/nicom/Sites/portalicm/modules/usuarios/controllers/indexController.php",
+		"/Users/nicom/Projects/Django/WrappedDjango/Projects/OficinaVirtual/requirements.txt",
+		"/Users/nicom/Projects/Django/WrappedDjango/Projects/OficinaVirtual/manage.py",
+		"/Users/nicom/Projects/Django/WrappedDjango/Projects/OficinaVirtual/OficinaVirtual/settings.py",
+		"/Users/nicom/Desktop/16 - 1.webp",
+		"/Users/nicom/Projects/Django/WrappedDjango/Projects/OficinaVirtual/OficinaVirtual/requirements.txt",
+		"/private/var/folders/mq/md70m4nd4vq83z0q1tmt20th0000gn/T/com.microsoft.Outlook/Outlook Temp/DBS_Application.log[4].1",
+		"/Datos/Scripts/Python/Hashcracker_dic_attack.py",
+		"/Datos/Scripts/Python/task_robot.py",
+		"/Users/nicom/Downloads/archive/server.crt",
+		"/Users/nicom/Downloads/archive/ca.key",
+		"/Datos/OpenVPN/NasCasa/keys/clientes2/cliente2_10.8.0.1_raspi2.ovpn",
+		"/Datos/OpenVPN/NasCasa/keys/clientes2/cliente2_10.8.0.1_raspi2.conf",
+		"/Datos/OpenVPN/NasCasa/keys/clientes2/cliente1_10.8.0.1_raspi2.conf",
+		"/Datos/Scripts/Bash/monitorHost.sh",
+		"/Volumes/NTFS Mounter/ReadMe.txt",
+		"/Datos/Scripts/Bash/Montar_disco_ntfs_osx.sh",
+		"/Datos/Interactive-Programming-in-Python-with-Coursera-master/mini project 7 \"Spaceship\".py",
+		"/Datos/Interactive-Programming-in-Python-with-Coursera-master/mini project 7 \"Spaceship2.py",
+		"/Users/nicom/Downloads/phpvirtualbox-5.0-3/config.php-example",
+		"/Users/nicom/Downloads/phpvirtualbox-5.0-3/README.txt",
+		"/Users/nicom/Desktop/Blackjack.py",
+		"/Datos/Interactive-Programming-in-Python-with-Coursera-master/mini project 6 \"Blackjack\".py",
+		"/Users/nicom/Downloads/Interactive-Programming-in-Python-with-Coursera-master/mini project 5 \"Memory\".py",
+		"/Users/nicom/Desktop/Button Drawer - Source/Buttons.py",
+		"/Users/nicom/Desktop/Button Drawer - Source/Example.py",
+		"/Users/nicom/Downloads/Interactive-Programming-in-Python-with-Coursera-master/mini project 4 \"Pong\".py",
+		"/Users/nicom/Sites/portalicm/array.txt",
+		"/Volumes/Storage/dns.txt",
+		"/Users/nicom/Downloads/nagiosgraph-1.5.2/debian/postinst",
+		"/Users/nicom/Downloads/nagiosgraph-1.5.2/t/05permissions.t",
+		"/Users/nicom/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/nicom/Downloads/check_mysql_connections",
+		"/Users/nicom/Downloads/check_tomcat.pl",
+		"/Users/nicom/Downloads/for_loop.bat",
+		"/Users/nicom/Projects/django-oscar/tests/_site/apps/shipping/models.py",
+		"/Users/nicom/Projects/django-oscar/tests/_site/apps/partner/models.py",
+		"/Users/nicom/Projects/django-oscar/tests/_site/apps/customer/models.py",
+		"/Users/nicom/Projects/django-oscar/oscar/lib/python3.4/site-packages/IPython/html/static/components/highlight.js/src/styles/default.css",
+		"/Users/nicom/Desktop/XML/input/DGGC_G160290_2015.xml",
+		"/Users/nicom/Desktop/XML/input/DGGC_G160288_2015.xml",
+		"/Users/nicom/Desktop/XML/input/DGGC_G160282_2015.xml",
+		"/Users/nicom/Desktop/XML/input/DGGC_A160339_2015.xml",
+		"/Users/nicom/Desktop/XML/input/DGAI_A160349_2015.xml",
+		"/Users/nicom/Desktop/XML/input/1342073813375-decoded.xml",
+		"/Users/nicom/Desktop/XML/input/780675.xml",
+		"/Users/nicom/Desktop/XML/config.conf"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"checked",
+			"dealer_hand",
+			"player_hand"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"hand_dealer",
+			"hand_player"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"project": "/Users/nicom/Projects/Django/WrappedDjango/Projects/HelpDesk/HelpDesk/django_oficina_virtual.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 192.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

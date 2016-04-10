@@ -39,6 +39,7 @@ class menuModelWidget extends Model
                                 'id' => 'registro',
                                 'titulo' => 'Registro',
                                 'enlace' => BASE_URL . 'usuarios/registro',
+                                'divider' => false,
                                 'imagen' => 'glyphicon-expand'
                                 )
 
@@ -86,7 +87,14 @@ class menuModelWidget extends Model
                     'divider' => true,
                     'imagen' => 'glyphicon-chevron-left',
                     'submenu' =>
-                            array()
+                            array(
+                                'id' => 'Actividad',
+                                'titulo' => 'Actividad del Sistema',
+                                'enlace' => BASE_URL,
+                                'divider' => false,
+                                'imagen' => 'glyphicon-expand'
+
+                                )
                 )
 
             );
